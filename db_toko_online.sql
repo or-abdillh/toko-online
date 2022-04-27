@@ -1,4 +1,4 @@
--- MariaDB dump 10.19  Distrib 10.6.7-MariaDB, for Android (aarch64)
+ -- MariaDB dump 10.19  Distrib 10.6.7-MariaDB, for Android (aarch64)
 --
 -- Host: localhost    Database: db_toko_online
 -- ------------------------------------------------------
@@ -53,12 +53,12 @@ DROP TABLE IF EXISTS `kategori`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `kategori` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_kategori` varchar(255) DEFAULT NULL,
+  `nama_kategori` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +67,7 @@ CREATE TABLE `kategori` (
 
 LOCK TABLES `kategori` WRITE;
 /*!40000 ALTER TABLE `kategori` DISABLE KEYS */;
-INSERT INTO `kategori` VALUES (1,'Hijab','2021-12-13 01:50:13','2021-12-13 02:13:46',NULL),(2,'wad','2021-12-13 01:51:21','2021-12-13 02:02:01','2021-12-13 02:02:01'),(3,'Pashmina','2021-12-13 02:13:01','2021-12-13 02:13:38','2021-12-13 02:13:38'),(4,'Hijab Instan','2021-12-13 02:13:16','2021-12-13 02:13:41','2021-12-13 02:13:41'),(5,'Pakaian Pria','2021-12-13 02:13:25',NULL,NULL),(6,'Pakaian Wanita','2021-12-13 02:13:30',NULL,NULL),(7,'Aksesoris','2021-12-13 02:14:00',NULL,NULL);
+INSERT INTO `kategori` VALUES (1,'Hijab','2021-12-13 01:50:13','2021-12-13 02:13:46',NULL),(2,'Sepatu','2021-12-13 01:51:21','2021-12-13 02:02:01','2021-12-13 02:02:01'),(3,'Pashmina','2021-12-13 02:13:01','2021-12-13 02:13:38','2021-12-13 02:13:38'),(4,'Hijab Instan','2021-12-13 02:13:16','2021-12-13 02:13:41','2021-12-13 02:13:41'),(5,'Pakaian Pria','2021-12-13 02:13:25',NULL,NULL),(6,'Pakaian Wanita','2021-12-13 02:13:30',NULL,NULL),(7,'Aksesoris','2021-12-13 02:14:00',NULL,NULL);
 /*!40000 ALTER TABLE `kategori` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -83,7 +83,7 @@ CREATE TABLE `migrations` (
   `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -92,7 +92,7 @@ CREATE TABLE `migrations` (
 
 LOCK TABLES `migrations` WRITE;
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
-INSERT INTO `migrations` VALUES (1,'2014_10_12_000000_create_users_table',1),(2,'2014_10_12_100000_create_password_resets_table',1),(3,'2019_08_19_000000_create_failed_jobs_table',1),(4,'2019_12_14_000001_create_personal_access_tokens_table',1);
+INSERT INTO `migrations` VALUES (1,'2019_12_14_000001_create_personal_access_tokens_table',1),(2,'2022_04_27_132932_create_failed_jobs_table',1),(3,'2022_04_27_132932_create_kategori_table',1),(4,'2022_04_27_132932_create_password_resets_table',1),(5,'2022_04_27_132932_create_produk_table',1),(6,'2022_04_27_132932_create_users_table',1);
 /*!40000 ALTER TABLE `migrations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -162,15 +162,15 @@ DROP TABLE IF EXISTS `produk`;
 CREATE TABLE `produk` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_kategori` int(11) NOT NULL,
-  `gambar` varchar(255) DEFAULT NULL,
-  `nama_produk` varchar(255) DEFAULT NULL,
-  `deskripsi` text DEFAULT NULL,
+  `gambar` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nama_produk` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `deskripsi` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `harga_jual` int(11) NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `deleted_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -225,4 +225,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-04-21 19:51:30
+-- Dump completed on 2022-04-27 21:45:42
