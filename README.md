@@ -3,8 +3,8 @@
 
 # Instalasi
 ### Menggunakan git :
-- <code><code>git clone https://github.com/or-abdillh/toko-online.git</c</code>ode>
-- <code><code>cd toko-online</co</code>de><code></code>
+- <code>git clone https://github.com/or-abdillh/toko-online.git</code>
+- <code>cd toko-online</code>
 
 ### Unduh zip repository
 - Gunakan button code pada pojok kanan atas lalu pilih opsi <strong>Download Zip</strong>
@@ -16,10 +16,19 @@ Ikuti langkah berikut ini untuk dapat menggunakan aplikasi ini :
 - Buat sebuah database baru bernama 'db_toko_online'
 - Dumping sql menggunakan file db_toko_online.sql menggunakan mysql-cli atau phpMyAdmin
 
+### Migration dan Seeding
+- Jalankan perintah <code>php artisan migrate</code>
+- Jalankan perintah <code>php artisan db:seed</code>
+
 ### Persipan Aplikasi
-- jalankan perintah <code><code></code>composer install</code>
-- jalankan perintah <code><code>php artiisan key:generate</code</code>
-- jalankan perintah php artisan serve
+- jalankan perintah <code>composer install</code>
+- jalankan perintah <code>php artiisan key:generate</code>
+- jalankan perintah <code>php artisan serve</code>
+
+### Troubleshooting
+Jika gambar pada website tidak tampil lakukan step berikut ini :
+- Gunakan perintah pada terminal <code>rm public/storage</code>
+- Gunakan perintah pada terminal <code>php artisan storage:link</code>
 
 ### Login sebagai admin
 - Gunakan email 'admin@gmail.com'
