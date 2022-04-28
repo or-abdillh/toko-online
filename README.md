@@ -1,6 +1,12 @@
 <h1 align="center">Toko Online Laravel 8</h1>
 <p align="center">Proyek UTS Pemrograman Web Lanjut - 2022</p>
 
+## Kelompok 2
+- Fitriana
+- Maulida Aziza
+- Muhammad Hamdi
+- Oka Rajeb Abdillah
+
 # Instalasi
 ### Menggunakan git :
 - <code>git clone https://github.com/or-abdillh/toko-online.git</code>
@@ -34,3 +40,4 @@ Jika gambar pada website tidak tampil lakukan step berikut ini :
 - Gunakan email 'admin@gmail.com'
 - Gunakan password 'secret'
 
+Last edited on 28/04/2022
